@@ -1,7 +1,9 @@
 <div class="card">
-  <div class="row g-0">
+  <div class="row g-0" style="background-color: #f8f9fa">
     <div class="col-md-1">
-      <span>Upvotes: {{ link.data.ups }}</span>
+      <fa-icon [icon]="faArrowUp"></fa-icon>
+      <span>{{ link.data.ups | thousandSuffix }}</span>
+      <fa-icon [icon]="faArrowDown"></fa-icon>
     </div>
     <div class="col-md-2">
       <div class="thumbnail">

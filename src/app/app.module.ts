@@ -11,6 +11,10 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { CommentsComponent } from './components/comments/comments.component';
 import { ModalComponent } from './components/modal/modal.component';
 
+import { ThousandSuffixesPipe } from './pipes/thousand-suffix.pipe';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,8 +24,14 @@ import { ModalComponent } from './components/modal/modal.component';
     PaginationComponent,
     CommentsComponent,
     ModalComponent,
+    ThousandSuffixesPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FontAwesomeModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
