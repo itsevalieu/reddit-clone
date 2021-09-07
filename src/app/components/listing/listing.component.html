@@ -1,0 +1,14 @@
+<ng-container *ngIf="listingData | async as listings">
+  <div class="listing">
+    <h1>Listing shows</h1>
+    <ng-container *ngFor="let link of listings.children">
+      <app-link [link]="link"></app-link>
+    </ng-container>
+    <app-pagination
+      [after]="listings.after ? listings.after : ''"
+      [before]="listings.before ? listings.before : ''"
+      [count]="listings.count"
+      (showNewListings)="getNewListings($event)"
+    ></app-pagination>
+  </div>
+</ng-container>
