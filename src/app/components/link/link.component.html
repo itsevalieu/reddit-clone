@@ -1,36 +1,31 @@
 <div class="card">
-  <div class="row g-0">
-    <div class="col-md-1">
-      <div class="upvotes">
-        <fa-icon [icon]="faArrowUp"></fa-icon>
-        <span>{{ link.data.ups | thousandSuffix }}</span>
-        <fa-icon [icon]="faArrowDown"></fa-icon>
-      </div>
-    </div>
-    <div class="col-md-2">
-      <div class="thumbnail">
-        <img
-          src="{{
-            link.data.thumbnail === 'self' ||
-            link.data.thumbnail === 'default' ||
-            link.data.thumbnail === 'nsfw'
-              ? defaultThumbnail
-              : link.data.thumbnail
-          }}"
-          class="img-fluid rounded-start"
-          alt="..."
-        />
-      </div>
-    </div>
-    <div class="col-md-9">
-      <div class="card-body">
-        <h5 class="card-title">{{ link.data.title }}</h5>
-        <p class="card-text">
-          <span>{{ link.data.subreddit_name_prefixed }} • </span
-          ><span>Posted by u/{{ link.data.author }}</span>
-          <span>LINK ID: {{ link.data.id }}</span>
-        </p>
-      </div>
-    </div>
+  <div class="upvotes">
+    <fa-icon [icon]="faArrowUp"></fa-icon>
+    <span>{{ link.data.ups | thousandSuffix }}</span>
+    <fa-icon [icon]="faArrowDown"></fa-icon>
+  </div>
+  <div class="thumbnail">
+    <img
+      src="{{
+        link.data.thumbnail === 'self' ||
+        link.data.thumbnail === 'default' ||
+        link.data.thumbnail === 'nsfw'
+          ? defaultThumbnail
+          : link.data.thumbnail
+      }}"
+      class="img-fluid rounded"
+      alt="..."
+    />
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{ link.data.title }}</h5>
+    <p class="card-text">
+      <span style="font-weight: bold"
+        >{{ link.data.subreddit_name_prefixed }} • </span
+      ><span style="color: rgb(129, 131, 132)"
+        >Posted by u/{{ link.data.author }}</span
+      >
+      <span>LINK ID: {{ link.data.id }}</span>
+    </p>
   </div>
 </div>
