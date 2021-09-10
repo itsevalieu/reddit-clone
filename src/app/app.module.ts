@@ -9,11 +9,11 @@ import { LinkComponent } from './components/link/link.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { CommentsComponent } from './components/comments/comments.component';
-import { ModalComponent } from './components/modal/modal.component';
 
 import { ThousandSuffixesPipe } from './pipes/thousand-suffix.pipe';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     NavbarComponent,
     PaginationComponent,
     CommentsComponent,
-    ModalComponent,
     ThousandSuffixesPipe,
   ],
   imports: [
@@ -31,6 +30,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppRoutingModule,
     HttpClientModule,
     FontAwesomeModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

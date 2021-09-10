@@ -2,4 +2,11 @@
 
 .app {
   background-color: $backgroundColor;
+  button {
+    border-radius: 45%;
+    margin-right: 10px;
+    &:hover {
+      background-color: $backgroundColor;
+    }
+  }
 }

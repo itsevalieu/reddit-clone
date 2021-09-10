@@ -4,6 +4,30 @@
     <div class="col-12 p-0"><app-navbar></app-navbar></div>
   </div>
   <div class="row">
+    <div class="col-12">
+      <div class="card" style="margin: 20px 20px 0">
+        <div class="card-body">
+          <form>
+            <input
+              class="form-control"
+              type="search"
+              placeholder="Create Post"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card" style="margin: 20px 20px 0">
+        <div class="card-body">
+          <button type="button" class="btn btn-light">Best</button>
+          <button type="button" class="btn btn-light">Hot</button>
+          <button type="button" class="btn btn-light">New</button>
+          <button type="button" class="btn btn-light">Top</button>
+        </div>
+      </div>
+    </div>
     <div class="col-12"><app-listing></app-listing></div>
   </div>
   <router-outlet></router-outlet>
